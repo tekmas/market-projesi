@@ -10,7 +10,7 @@ public class Depo {
     static String [] urun_fiyat=new String[2];
 static double fiyat;
 static double miktar;
-    static List<Double> sepetFiyatlar = new ArrayList<>();
+    static List<Double> sepet = new ArrayList<>();
     //  static Map.Entry<String,String> entry= (Map.Entry<String, String>) liste.entrySet();
     static void alısverislist() {
         liste.put("00", "Domates, 2.10 ");
@@ -69,16 +69,16 @@ static double miktar;
         double fiyat= Double.parseDouble((urun_fiyat[1]));
 
         System.out.println(miktar+" kg "+urun_fiyat[0]+" sepetinize eklenmiştiş.");
-       sepetFiyatlar.add((fiyat*miktar));
+       sepet.add((fiyat*miktar));
     }
 static void odeme(){
 
 
     double toplamtutar = 0;
-    for (int i=0;i<sepetFiyatlar.size();i++){
-        toplamtutar+=sepetFiyatlar.get(i);
+    for (int i=0;i<sepet.size();i++){
+        toplamtutar+=sepet.get(i);
     }
-    System.out.println("odemeniz gereken miktar " + toplamtutar+" tl'dir. lütfen ödemenizi yapın");
+    System.out.println("odemeniz gereken miktar " + toplamtutar+" tl'dir. lütfen ödemenizi yapmak için bir tutar girin");
     Scanner scan2=new Scanner(System.in);
     double odeme= scan2.nextDouble();
     System.out.println((odeme-toplamtutar)+" para üstü verilecektir");
