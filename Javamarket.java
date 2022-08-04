@@ -15,12 +15,12 @@ public class Javamarket {
                 alısverislist();
                 urunsec_miktarhesapla();
                 Scanner scan = new Scanner(System.in);
-                System.out.println("alışverişe devam edecek misiniz?(evet/hayır)");
+                System.out.println("alışverişe devam edecek misiniz?(cevabınız evet ise e, hayır ise h'ye basınız)");
                 devamMi = scan.next();
             }
-            while (devamMi.equalsIgnoreCase("evet"));
+            while (devamMi.equalsIgnoreCase("e"));
         }
-        if (devamMi.equalsIgnoreCase("hayır"))
+        if (devamMi.equalsIgnoreCase("h"))
             odeme();
     }
 }

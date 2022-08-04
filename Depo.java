@@ -72,8 +72,6 @@ static double miktar;
        sepet.add((fiyat*miktar));
     }
 static void odeme(){
-
-
     double toplamtutar = 0;
     for (int i=0;i<sepet.size();i++){
         toplamtutar+=sepet.get(i);
@@ -81,6 +79,12 @@ static void odeme(){
     System.out.println("odemeniz gereken miktar " + toplamtutar+" tl'dir. lütfen ödemenizi yapmak için bir tutar girin");
     Scanner scan2=new Scanner(System.in);
     double odeme= scan2.nextDouble();
+    double ilaveOdeme = 0;
+  while (odeme<toplamtutar){
+        System.out.println("ödenen miktar yetersizdir. lütfen para ekleyin");
+        ilaveOdeme= scan2.nextDouble();
+        odeme+=ilaveOdeme;
+    }
     System.out.println((odeme-toplamtutar)+" para üstü verilecektir");
 }
 
